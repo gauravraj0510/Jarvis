@@ -2,6 +2,9 @@ import pyttsx3
 import speech_recognition as sr 
 import datetime
 import wikipedia
+import webbrowser
+
+webbrowser.register('chrome',None,webbrowser.BackgroundBrowser("C://Program Files (x86)//Google//Chrome//Application//chrome.exe"))
 
 
 engine = pyttsx3.init('sapi5')
@@ -58,5 +61,18 @@ if __name__ == "__main__":
             speak('According to wikipedia')
             print(results)
             speak(results)
+
+        elif 'youtube' in query:
+            webbrowser.get('chrome').open('youtube.com')
+
+        elif 'google' in query:
+            webbrowser.get('chrome').open('google.com')
         
+        elif 'instagram' in query:
+            webbrowser.get('chrome').open('instagram.com')
+
+        elif 'github' in query:
+            webbrowser.get('chrome').open('github.com')
+
+
 
