@@ -86,6 +86,10 @@ if __name__ == "__main__":
             strTime = datetime.datetime.now().strftime('%H:%M:%S')
             speak(f"The time is: {strTime}\n")
 
+        elif 'open vs code' in query:
+            codePath = 'C:\\Users\\Gaurav Raj\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe'
+            os.startfile(codePath)
+
 
 
 
