@@ -1,5 +1,5 @@
 # Jarvis
-For Installation:<br>
+<b>For Installation:</b><br>
 ->pip install pyttsx3<br>
 ->pip install searchRecognition<br>
 ->pip install wikipedia<br>
