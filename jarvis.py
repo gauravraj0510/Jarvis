@@ -3,6 +3,8 @@ import speech_recognition as sr
 import datetime
 import wikipedia
 import webbrowser
+import os
+import random
 
 webbrowser.register('chrome',None,webbrowser.BackgroundBrowser("C://Program Files (x86)//Google//Chrome//Application//chrome.exe"))
 
@@ -73,6 +75,17 @@ if __name__ == "__main__":
 
         elif 'github' in query:
             webbrowser.get('chrome').open('github.com')
+
+        elif 'play music' in query:
+            music_dir = 'C:\\Users\\Gaurav Raj\\Music\\Green Day'
+            songs = os.listdir(music_dir)
+            rand = random.randint(0,len(songs)-1)
+            os.startfile(os.path.join(music_dir, songs[rand]))
+
+        elif 'the time' in query:
+            strTime = datetime.datetime.now().strftime('%H:%M:%S')
+            speak(f"The time is: {strTime}\n")
+
 
 
 
